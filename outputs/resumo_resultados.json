@@ -1,0 +1,190 @@
+{
+  "avaliacao_sinais_vitais": {
+    "episodios": [
+      {
+        "paciente": "P001",
+        "episodio": "deterioracao_sepse",
+        "inicio_real": "2026-11-11 06:00:00",
+        "detectado": true,
+        "primeira_deteccao": "2026-11-11 07:14:00",
+        "atraso_min": 74.0,
+        "somente_news2_ge5": "2026-11-11 08:10:00",
+        "metodos": [
+          "Isolation Forest",
+          "NEWS2"
+        ]
+      },
+      {
+        "paciente": "P002",
+        "episodio": "dessaturacao",
+        "inicio_real": "2026-11-10 20:00:00",
+        "detectado": true,
+        "primeira_deteccao": "2026-11-10 20:01:00",
+        "atraso_min": 1.0,
+        "somente_news2_ge5": "2026-11-10 20:02:00",
+        "metodos": [
+          "Isolation Forest",
+          "NEWS2",
+          "z-score robusto"
+        ]
+      },
+      {
+        "paciente": "P004",
+        "episodio": "crise_hipertensiva",
+        "inicio_real": "2026-11-11 12:00:00",
+        "detectado": true,
+        "primeira_deteccao": "2026-11-11 12:02:00",
+        "atraso_min": 2.0,
+        "somente_news2_ge5": "não detectaria",
+        "metodos": [
+          "Isolation Forest",
+          "z-score robusto"
+        ]
+      }
+    ],
+    "falsos_positivos": 0,
+    "recall": 1.0
+  },
+  "artefatos_removidos": 24,
+  "audio": {
+    "P001": {
+      "transcricao": "transcricao_referencia",
+      "texto": "local",
+      "indicadores": {
+        "fadiga": 0.637,
+        "disartria": 0.195,
+        "dificuldade_respiratoria": 0.85
+      },
+      "termos": [
+        "cansada",
+        "falta de ar",
+        "fraqueza",
+        "febre",
+        "calafrio",
+        "tontura",
+        "nao tenho vontade de comer"
+      ],
+      "sentimento": "negative"
+    },
+    "P003": {
+      "transcricao": "transcricao_referencia",
+      "texto": "local",
+      "indicadores": {
+        "fadiga": 0.309,
+        "disartria": 0.074,
+        "dificuldade_respiratoria": 0.198
+      },
+      "termos": [],
+      "sentimento": "positive"
+    }
+  },
+  "video": {
+    "fisioterapia_simulada.mp4": {
+      "eventos": [
+        [
+          16.2,
+          "execucao_incorreta",
+          "MEDIA"
+        ],
+        [
+          19.4,
+          "postura_atipica",
+          "BAIXA"
+        ],
+        [
+          19.5,
+          "execucao_incorreta",
+          "MEDIA"
+        ],
+        [
+          22.6,
+          "execucao_incorreta",
+          "MEDIA"
+        ],
+        [
+          25.8,
+          "execucao_incorreta",
+          "MEDIA"
+        ],
+        [
+          26.9,
+          "sessao_fora_do_padrao",
+          "ALTA"
+        ]
+      ],
+      "repeticoes": 8
+    },
+    "queda_simulada.mp4": {
+      "eventos": [
+        [
+          4.6,
+          "queda",
+          "CRITICA"
+        ]
+      ],
+      "repeticoes": 0
+    }
+  },
+  "alertas_total": 26,
+  "alertas_suprimidos_cooldown": 0,
+  "alertas_por_origem": {
+    "prescription": 9,
+    "vitals": 4,
+    "movement": 4,
+    "fusion": 3,
+    "audio": 3,
+    "video": 3
+  },
+  "alertas_por_severidade": {
+    "ALTA": 9,
+    "MEDIA": 7,
+    "CRITICA": 7,
+    "BAIXA": 3
+  },
+  "risco_por_paciente": {
+    "P004": {
+      "peak_risk": 1.0,
+      "modalities": {
+        "video": 0.9,
+        "movement": 0.7,
+        "vitals": 0.55
+      },
+      "peak_time": "2026-11-11 12:02:00",
+      "severity": "CRITICA",
+      "n_alerts": 7
+    },
+    "P002": {
+      "peak_risk": 1.0,
+      "modalities": {
+        "vitals": 1.0,
+        "prescription": 0.7,
+        "movement": 0.4
+      },
+      "peak_time": "2026-11-11 01:35:00",
+      "severity": "CRITICA",
+      "n_alerts": 5
+    },
+    "P001": {
+      "peak_risk": 1.0,
+      "modalities": {
+        "vitals": 0.9500000000000001,
+        "audio": 0.85,
+        "movement": 0.45,
+        "video": 0.7
+      },
+      "peak_time": "2026-11-11 10:00:26.880000",
+      "severity": "CRITICA",
+      "n_alerts": 10
+    },
+    "P003": {
+      "peak_risk": 0.25,
+      "modalities": {
+        "prescription": 0.25
+      },
+      "peak_time": "2026-11-11 03:00:00",
+      "severity": "BAIXA",
+      "n_alerts": 1
+    }
+  },
+  "painel": "/home/user/pos-tech-challenge-fase-4/outputs/painel_equipe_medica.html"
+}

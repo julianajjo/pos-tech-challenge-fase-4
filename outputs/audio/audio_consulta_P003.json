@@ -1,0 +1,101 @@
+{
+  "audio": "/home/user/pos-tech-challenge-fase-4/data/samples/consulta_P003.wav",
+  "patient_id": "P003",
+  "transcript": "Bom dia doutora. Estou me sentindo bem melhor hoje. Dormi bem a noite toda, consegui caminhar no corredor pela manhã e estou me alimentando normalmente. A dor na perna diminuiu bastante.",
+  "transcription_provider": "transcricao_referencia",
+  "text_provider": "local",
+  "features": {
+    "duration_s": 13.5104,
+    "speech_s": 12.08,
+    "pause_ratio": 0.0837,
+    "n_pauses": 3,
+    "long_pauses": 0,
+    "mean_pause_s": 0.3093,
+    "pauses_per_min": 13.6529,
+    "mean_phrase_s": 2.416,
+    "syllables": 59,
+    "articulation_rate": 4.8841,
+    "rhythm_cv": 0.3165,
+    "f0_median_hz": 106.8197,
+    "f0_std_st": 1.3525,
+    "f0_range_st": 4.8,
+    "jitter": 0.0127,
+    "shimmer": 0.2019,
+    "spectral_flatness": 0.0081,
+    "energy_decline_db": 0.8798
+  },
+  "indicators": {
+    "fadiga": {
+      "score": 0.309,
+      "evidencias": [
+        "monotonia"
+      ]
+    },
+    "disartria": {
+      "score": 0.074,
+      "evidencias": []
+    },
+    "dificuldade_respiratoria": {
+      "score": 0.198,
+      "evidencias": [
+        "pausas_respiratorias"
+      ]
+    },
+    "componentes": {
+      "fala_lenta": 0.0,
+      "pausas": 0.0,
+      "pausas_longas": 0.0,
+      "monotonia": 1.0,
+      "queda_energia": 0.293,
+      "jitter": 0.017,
+      "shimmer": 0.346,
+      "ritmo_irregular": 0.0,
+      "pausas_respiratorias": 0.517,
+      "frases_curtas": 0.056,
+      "soprosidade": 0.0
+    }
+  },
+  "sentiment": {
+    "positive": 0.875,
+    "negative": 0.125,
+    "neutral": 0.0,
+    "label": "positive"
+  },
+  "critical_terms": [],
+  "key_phrases": [],
+  "health_entities": [],
+  "segments": [
+    {
+      "text": "Bom dia doutora. Estou me sentindo bem melhor hoje. Dormi bem a noite toda, consegui caminhar no corredor pela manhã e estou me alimentando normalmente. A dor na perna diminuiu bastante.",
+      "start_s": 0.0,
+      "end_s": null,
+      "words": []
+    }
+  ],
+  "sentences": [
+    {
+      "text": "Bom dia doutora.",
+      "sentiment": "positive",
+      "negative": 0.0,
+      "opinions": []
+    },
+    {
+      "text": "Estou me sentindo bem melhor hoje.",
+      "sentiment": "positive",
+      "negative": 0.0,
+      "opinions": []
+    },
+    {
+      "text": "Dormi bem a noite toda, consegui caminhar no corredor pela manhã e estou me alimentando normalmente.",
+      "sentiment": "positive",
+      "negative": 0.0,
+      "opinions": []
+    },
+    {
+      "text": "A dor na perna diminuiu bastante.",
+      "sentiment": "neutral",
+      "negative": 0.5,
+      "opinions": []
+    }
+  ]
+}

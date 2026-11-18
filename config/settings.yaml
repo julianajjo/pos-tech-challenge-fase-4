@@ -1,0 +1,103 @@
+# Configurações do sistema de monitoramento multimodal
+# Valores podem ser sobrescritos por variáveis de ambiente (ver .env.example)
+
+paths:
+  output_dir: outputs
+  samples_dir: data/samples
+
+azure:
+  speech_language: pt-BR
+  text_language: pt
+  use_healthcare_entities: true
+
+alerts:
+  cooldown_minutes: 15          # evita alertas repetidos do mesmo tipo para o mesmo paciente
+  min_severity_webhook: ALTA    # só envia para o webhook (Teams/Slack) a partir desta severidade
+  jsonl_path: outputs/alerts/alerts.jsonl
+
+video:
+  pose_model: yolov8n-pose.pt
+  detection_model: yolov8n.pt
+  pose_backend: yolo            # yolo | openpose | openpose_json
+  openpose_json_dir: ""         # pasta com *_keypoints.json (saída do binário OpenPose)
+  openpose_proto: models/openpose/pose_deploy_linevec.prototxt
+  openpose_weights: models/openpose/pose_iter_440000.caffemodel
+  frame_stride: 2               # processa 1 a cada N frames
+  confidence: 0.35
+  keypoint_confidence: 0.3
+  fall:
+    hip_drop_ratio: 0.25        # queda do quadril (fração da altura do corpo) em até 1 s
+    lying_aspect_ratio: 1.3     # largura/altura da caixa da pessoa indicando posição deitada
+    lying_min_s: 2.0
+  # protocolo do exercício de fisioterapia (agachamento / sentar-levantar)
+  exercise:
+    name: agachamento
+    rep_down_angle: 120         # ângulo do joelho que caracteriza a descida
+    rep_up_angle: 160           # ângulo do joelho que caracteriza a subida
+    target_min_knee_angle: 100  # amplitude esperada: joelho deve chegar abaixo disso
+    max_trunk_inclination: 45   # graus em relação à vertical
+    max_asymmetry: 20           # diferença entre joelho esquerdo e direito (graus)
+  # zonas críticas por modo de análise (polígonos em coordenadas normalizadas 0-1)
+  zones:
+    cirurgia:
+      - name: campo_cirurgico
+        polygon: [[0.30, 0.40], [0.70, 0.40], [0.70, 0.85], [0.30, 0.85]]
+        max_people: 4
+        forbidden_classes: [knife, scissors, cell phone, bottle, cup]
+    monitoramento:
+      - name: corredor_restrito
+        polygon: [[0.15, 0.55], [0.85, 0.55], [0.85, 1.0], [0.15, 1.0]]
+        max_people: 4
+        forbidden_classes: [knife, scissors]
+    fisioterapia: []
+  instrument_classes: [knife, scissors]
+
+audio:
+  sample_rate: 16000
+  top_db: 30                    # limiar do detector de voz (silêncio)
+  thresholds:
+    speech_rate_low: 2.6        # sílabas/s abaixo disso = fala lentificada
+    pause_ratio_high: 0.35      # proporção de silêncio acima disso
+    long_pause_s: 1.0
+    pitch_std_low_st: 1.4       # variação de pitch (semitons) abaixo disso = monotonia
+    jitter_high: 0.025
+    shimmer_high: 0.30            # aproximação por quadro (RMS), maior que o shimmer clássico
+    breath_pauses_per_min_high: 18
+    energy_decline_db: 3.0      # queda de energia entre início e fim da fala
+
+vitals:
+  baseline_hours: 6             # janela inicial usada para treinar o modelo do paciente
+  rolling_window_min: 60
+  zscore_threshold: 4.0
+  isolation_contamination: 0.01
+  min_episode_minutes: 3
+  limits:
+    hr: [20, 250]
+    sbp: [40, 260]
+    dbp: [20, 180]
+    spo2: [50, 100]
+    rr: [4, 60]
+    temp: [30, 43]
+
+prescriptions:
+  dose_jump_ratio: 2.0          # aumento/redução maior que 2x em relação à dose anterior
+  max_changes_24h: 3
+
+movement:
+  immobility_hours: 2           # tempo sem reposicionamento que gera alerta
+  night_hours: [23, 5]
+  zscore_threshold: 3.0
+
+fusion:
+  window_hours: 6
+  weights:
+    vitals: 0.35
+    audio: 0.2
+    video: 0.15
+    movement: 0.15
+    prescription: 0.15
+  corroboration_bonus: 0.15
+  thresholds:
+    MEDIA: 0.35
+    ALTA: 0.55
+    CRITICA: 0.75

@@ -1,0 +1,157 @@
+{
+  "audio": "/home/user/pos-tech-challenge-fase-4/data/samples/consulta_P001.wav",
+  "patient_id": "P001",
+  "transcript": "Doutora, eu estou muito cansada. Desde ontem sinto falta de ar quando falo, e uma fraqueza no corpo todo. Tive febre e calafrios a noite. Estou com tontura quando levanto e não tenho vontade de comer.",
+  "transcription_provider": "transcricao_referencia",
+  "text_provider": "local",
+  "features": {
+    "duration_s": 45.9601,
+    "speech_s": 21.856,
+    "pause_ratio": 0.5104,
+    "n_pauses": 35,
+    "long_pauses": 4,
+    "mean_pause_s": 0.651,
+    "pauses_per_min": 47.043,
+    "mean_phrase_s": 0.6071,
+    "syllables": 69,
+    "articulation_rate": 3.157,
+    "rhythm_cv": 0.208,
+    "f0_median_hz": 84.2946,
+    "f0_std_st": 1.7106,
+    "f0_range_st": 5.9,
+    "jitter": 0.012,
+    "shimmer": 0.155,
+    "spectral_flatness": 0.008,
+    "energy_decline_db": -0.0255
+  },
+  "indicators": {
+    "fadiga": {
+      "score": 0.637,
+      "evidencias": [
+        "fala_lenta",
+        "monotonia",
+        "pausas_longas"
+      ]
+    },
+    "disartria": {
+      "score": 0.195,
+      "evidencias": [
+        "fala_lenta"
+      ]
+    },
+    "dificuldade_respiratoria": {
+      "score": 0.85,
+      "evidencias": [
+        "pausas_respiratorias",
+        "frases_curtas",
+        "pausas"
+      ]
+    },
+    "componentes": {
+      "fala_lenta": 0.629,
+      "pausas": 1.0,
+      "pausas_longas": 1.0,
+      "monotonia": 0.793,
+      "queda_energia": 0.0,
+      "jitter": 0.0,
+      "shimmer": 0.033,
+      "ritmo_irregular": 0.0,
+      "pausas_respiratorias": 1.0,
+      "frases_curtas": 1.0,
+      "soprosidade": 0.0
+    }
+  },
+  "sentiment": {
+    "positive": 0.0,
+    "negative": 1.0,
+    "neutral": 0.0,
+    "label": "negative"
+  },
+  "critical_terms": [
+    {
+      "term": "cansada",
+      "category": "fadiga",
+      "severity": "BAIXA",
+      "negated": false,
+      "position": 24
+    },
+    {
+      "term": "falta de ar",
+      "category": "respiratorio",
+      "severity": "ALTA",
+      "negated": false,
+      "position": 51
+    },
+    {
+      "term": "fraqueza",
+      "category": "fadiga",
+      "severity": "MEDIA",
+      "negated": false,
+      "position": 82
+    },
+    {
+      "term": "febre",
+      "category": "infeccioso",
+      "severity": "MEDIA",
+      "negated": false,
+      "position": 111
+    },
+    {
+      "term": "calafrio",
+      "category": "infeccioso",
+      "severity": "MEDIA",
+      "negated": false,
+      "position": 119
+    },
+    {
+      "term": "tontura",
+      "category": "neurologico",
+      "severity": "MEDIA",
+      "negated": false,
+      "position": 148
+    },
+    {
+      "term": "nao tenho vontade de comer",
+      "category": "nutricional",
+      "severity": "BAIXA",
+      "negated": false,
+      "position": 173
+    }
+  ],
+  "key_phrases": [],
+  "health_entities": [],
+  "segments": [
+    {
+      "text": "Doutora, eu estou muito cansada. Desde ontem sinto falta de ar quando falo, e uma fraqueza no corpo todo. Tive febre e calafrios a noite. Estou com tontura quando levanto e não tenho vontade de comer.",
+      "start_s": 0.0,
+      "end_s": null,
+      "words": []
+    }
+  ],
+  "sentences": [
+    {
+      "text": "Doutora, eu estou muito cansada.",
+      "sentiment": "negative",
+      "negative": 1.0,
+      "opinions": []
+    },
+    {
+      "text": "Desde ontem sinto falta de ar quando falo, e uma fraqueza no corpo todo.",
+      "sentiment": "negative",
+      "negative": 1.0,
+      "opinions": []
+    },
+    {
+      "text": "Tive febre e calafrios a noite.",
+      "sentiment": "negative",
+      "negative": 1.0,
+      "opinions": []
+    },
+    {
+      "text": "Estou com tontura quando levanto e não tenho vontade de comer.",
+      "sentiment": "negative",
+      "negative": 1.0,
+      "opinions": []
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "video": "/home/user/pos-tech-challenge-fase-4/data/samples/fisioterapia_simulada.mp4",
+  "patient_id": "P001",
+  "mode": "fisioterapia",
+  "fps": 25.0,
+  "duration_s": 29.6,
+  "frames_processed": 370,
+  "people_tracked": 1,
+  "object_counts": {},
+  "events": [
+    {
+      "time_s": 16.16,
+      "kind": "execucao_incorreta",
+      "severity": "MEDIA",
+      "description": "Repetição 5 de agachamento: amplitude insuficiente (joelho mínimo 113° > alvo 100°).",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_01_execucao_incorreta.jpg",
+      "data": {
+        "index": 5,
+        "start_s": 15.28,
+        "bottom_s": 16.16,
+        "end_s": 17.28,
+        "min_knee": 112.74353671331951,
+        "max_trunk": 26.693858001820825,
+        "max_asymmetry": 6.942599735089047,
+        "issues": [
+          "amplitude insuficiente (joelho mínimo 113° > alvo 100°)"
+        ]
+      }
+    },
+    {
+      "time_s": 19.36,
+      "kind": "postura_atipica",
+      "severity": "BAIXA",
+      "description": "Padrão postural atípico por 0.6 s (Isolation Forest sobre ângulos articulares).",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_02_postura_atipica.jpg",
+      "data": {}
+    },
+    {
+      "time_s": 19.52,
+      "kind": "execucao_incorreta",
+      "severity": "MEDIA",
+      "description": "Repetição 6 de agachamento: inclinação excessiva do tronco (62°).",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_03_execucao_incorreta.jpg",
+      "data": {
+        "index": 6,
+        "start_s": 18.4,
+        "bottom_s": 19.52,
+        "end_s": 20.56,
+        "min_knee": 90.49650697868003,
+        "max_trunk": 62.17018129513749,
+        "max_asymmetry": 4.686004534614042,
+        "issues": [
+          "inclinação excessiva do tronco (62°)"
+        ]
+      }
+    },
+    {
+      "time_s": 22.64,
+      "kind": "execucao_incorreta",
+      "severity": "MEDIA",
+      "description": "Repetição 7 de agachamento: amplitude insuficiente (joelho mínimo 102° > alvo 100°); assimetria entre joelhos (34°).",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_04_execucao_incorreta.jpg",
+      "data": {
+        "index": 7,
+        "start_s": 21.6,
+        "bottom_s": 22.64,
+        "end_s": 23.68,
+        "min_knee": 101.92624447606302,
+        "max_trunk": 34.66345990483606,
+        "max_asymmetry": 33.66846829547336,
+        "issues": [
+          "amplitude insuficiente (joelho mínimo 102° > alvo 100°)",
+          "assimetria entre joelhos (34°)"
+        ]
+      }
+    },
+    {
+      "time_s": 25.84,
+      "kind": "execucao_incorreta",
+      "severity": "MEDIA",
+      "description": "Repetição 8 de agachamento: amplitude insuficiente (joelho mínimo 115° > alvo 100°); inclinação excessiva do tronco (50°).",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_05_execucao_incorreta.jpg",
+      "data": {
+        "index": 8,
+        "start_s": 24.88,
+        "bottom_s": 25.84,
+        "end_s": 26.88,
+        "min_knee": 114.8421150998167,
+        "max_trunk": 50.3001680668974,
+        "max_asymmetry": 4.7853658420657155,
+        "issues": [
+          "amplitude insuficiente (joelho mínimo 115° > alvo 100°)",
+          "inclinação excessiva do tronco (50°)"
+        ]
+      }
+    },
+    {
+      "time_s": 26.88,
+      "kind": "sessao_fora_do_padrao",
+      "severity": "ALTA",
+      "description": "4 de 8 repetições fora do padrão esperado. Sugere fadiga, dor ou necessidade de ajustar o exercício.",
+      "track_id": -1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_06_sessao_fora_do_padrao.jpg",
+      "data": {}
+    }
+  ],
+  "repetitions": [
+    {
+      "index": 1,
+      "start_s": 2.4,
+      "bottom_s": 3.44,
+      "end_s": 4.56,
+      "min_knee": 88.20130565091364,
+      "max_trunk": 30.83965300883504,
+      "max_asymmetry": 4.821656232261589,
+      "issues": []
+    },
+    {
+      "index": 2,
+      "start_s": 5.6,
+      "bottom_s": 6.64,
+      "end_s": 7.76,
+      "min_knee": 86.925322249472,
+      "max_trunk": 32.907020972538305,
+      "max_asymmetry": 5.363741408518138,
+      "issues": []
+    },
+    {
+      "index": 3,
+      "start_s": 8.8,
+      "bottom_s": 9.92,
+      "end_s": 10.96,
+      "min_knee": 90.98143880833771,
+      "max_trunk": 28.342398519559598,
+      "max_asymmetry": 6.461636218045172,
+      "issues": []
+    },
+    {
+      "index": 4,
+      "start_s": 12.0,
+      "bottom_s": 13.2,
+      "end_s": 14.16,
+      "min_knee": 87.2822075718589,
+      "max_trunk": 33.69503302173131,
+      "max_asymmetry": 4.553064080994957,
+      "issues": []
+    },
+    {
+      "index": 5,
+      "start_s": 15.28,
+      "bottom_s": 16.16,
+      "end_s": 17.28,
+      "min_knee": 112.74353671331951,
+      "max_trunk": 26.693858001820825,
+      "max_asymmetry": 6.942599735089047,
+      "issues": [
+        "amplitude insuficiente (joelho mínimo 113° > alvo 100°)"
+      ]
+    },
+    {
+      "index": 6,
+      "start_s": 18.4,
+      "bottom_s": 19.52,
+      "end_s": 20.56,
+      "min_knee": 90.49650697868003,
+      "max_trunk": 62.17018129513749,
+      "max_asymmetry": 4.686004534614042,
+      "issues": [
+        "inclinação excessiva do tronco (62°)"
+      ]
+    },
+    {
+      "index": 7,
+      "start_s": 21.6,
+      "bottom_s": 22.64,
+      "end_s": 23.68,
+      "min_knee": 101.92624447606302,
+      "max_trunk": 34.66345990483606,
+      "max_asymmetry": 33.66846829547336,
+      "issues": [
+        "amplitude insuficiente (joelho mínimo 102° > alvo 100°)",
+        "assimetria entre joelhos (34°)"
+      ]
+    },
+    {
+      "index": 8,
+      "start_s": 24.88,
+      "bottom_s": 25.84,
+      "end_s": 26.88,
+      "min_knee": 114.8421150998167,
+      "max_trunk": 50.3001680668974,
+      "max_asymmetry": 4.7853658420657155,
+      "issues": [
+        "amplitude insuficiente (joelho mínimo 115° > alvo 100°)",
+        "inclinação excessiva do tronco (50°)"
+      ]
+    }
+  ],
+  "outputs": {
+    "frames_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/pose_frames.csv",
+    "objects_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/objetos.csv",
+    "annotated_video": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/video_anotado.mp4",
+    "plot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/linha_do_tempo.png"
+  }
+}

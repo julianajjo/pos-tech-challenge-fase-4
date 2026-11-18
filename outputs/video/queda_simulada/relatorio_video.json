@@ -1,0 +1,35 @@
+{
+  "video": "/home/user/pos-tech-challenge-fase-4/data/samples/queda_simulada.mp4",
+  "patient_id": "P004",
+  "mode": "monitoramento",
+  "fps": 25.0,
+  "duration_s": 10.0,
+  "frames_processed": 125,
+  "people_tracked": 1,
+  "object_counts": {
+    "person": 125,
+    "tennis racket": 2
+  },
+  "events": [
+    {
+      "time_s": 4.64,
+      "kind": "queda",
+      "severity": "CRITICA",
+      "description": "Possível queda da pessoa #1: quadril desceu 34% da altura corporal em <1 s e terminou em posição horizontal.",
+      "track_id": 1,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/eventos/evento_01_queda.jpg",
+      "data": {
+        "time_s": 4.64,
+        "hip_drop_ratio": 0.3439849825103397,
+        "aspect_ratio": 3.2695746421813965
+      }
+    }
+  ],
+  "repetitions": [],
+  "outputs": {
+    "frames_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/pose_frames.csv",
+    "objects_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/objetos.csv",
+    "annotated_video": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/video_anotado.mp4",
+    "plot": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/linha_do_tempo.png"
+  }
+}

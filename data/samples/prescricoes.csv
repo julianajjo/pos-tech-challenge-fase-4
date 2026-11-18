@@ -1,0 +1,20 @@
+patient_id,timestamp,drug,dose,unit,times_per_day,drug_class,prescriber
+P001,2026-11-10 01:00:00,Dipirona,1000,mg,4,analgesico,Dr. Silva
+P001,2026-11-10 01:00:00,Morfina,2,mg,6,opioide,Dr. Silva
+P001,2026-11-10 14:00:00,Morfina,2,mg,6,opioide,Dr. Silva
+P001,2026-11-11 02:00:00,Morfina,20,mg,6,opioide,Dra. Costa
+P001,2026-11-11 07:00:00,Ceftriaxona,1000,mg,2,antibiotico,Dra. Costa
+P001,2026-11-11 07:00:00,Paracetamol,750,mg,4,analgesico,Dra. Costa
+P002,2026-11-10 02:00:00,Varfarina,5,mg,1,anticoagulante,Dr. Lima
+P002,2026-11-10 02:00:00,Omeprazol,20,mg,1,ibp,Dr. Lima
+P002,2026-11-10 18:00:00,AAS,100,mg,1,antiagregante,Dr. Souza
+P002,2026-11-10 22:00:00,Enoxaparina,40,mg,1,anticoagulante,Dr. Souza
+P003,2026-11-10 03:00:00,Losartana,50,mg,1,anti-hipertensivo,Dra. Rocha
+P003,2026-11-10 03:00:00,Dipirona,1000,mg,4,analgesico,Dra. Rocha
+P003,2026-11-11 03:00:00,Losartana,50,mg,2,anti-hipertensivo,Dra. Rocha
+P004,2026-11-10 01:00:00,Insulina regular,4,UI,3,insulina,Dr. Alves
+P004,2026-11-10 02:00:00,Metformina,850,mg,2,antidiabetico,Dr. Alves
+P004,2026-11-10 09:00:00,Insulina regular,6,UI,3,insulina,Dr. Alves
+P004,2026-11-10 13:00:00,Insulina regular,8,UI,3,insulina,Dr. Alves
+P004,2026-11-10 16:00:00,Insulina regular,20,UI,3,insulina,Plantonista
+P004,2026-11-10 20:00:00,Insulina regular,8,UI,3,insulina,Plantonista
