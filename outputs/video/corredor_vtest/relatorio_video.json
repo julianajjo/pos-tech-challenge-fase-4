@@ -1,0 +1,26 @@
+{
+  "video": "/tmp/corredor_vtest.avi",
+  "patient_id": "CORREDOR",
+  "mode": "monitoramento",
+  "fps": 10.0,
+  "duration_s": 79.5,
+  "frames_processed": 398,
+  "people_tracked": 13,
+  "object_counts": {
+    "person": 2305,
+    "truck": 399,
+    "car": 383,
+    "bird": 100,
+    "kite": 8,
+    "skis": 3,
+    "frisbee": 2
+  },
+  "events": [],
+  "repetitions": [],
+  "outputs": {
+    "frames_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/corredor_vtest/pose_frames.csv",
+    "objects_csv": "/home/user/pos-tech-challenge-fase-4/outputs/video/corredor_vtest/objetos.csv",
+    "annotated_video": "/home/user/pos-tech-challenge-fase-4/outputs/video/corredor_vtest/video_anotado.mp4",
+    "plot": "/home/user/pos-tech-challenge-fase-4/outputs/video/corredor_vtest/linha_do_tempo.png"
+  }
+}

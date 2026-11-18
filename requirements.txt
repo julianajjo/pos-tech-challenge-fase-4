@@ -1,0 +1,29 @@
+# núcleo
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+scipy>=1.11
+matplotlib>=3.8
+pyyaml>=6.0
+python-dotenv>=1.0
+requests>=2.31
+
+# vídeo
+ultralytics>=8.1        # YOLOv8 (detecção e pose)
+opencv-python-headless>=4.9
+lap>=0.5                # rastreamento ByteTrack
+
+# áudio
+librosa>=0.10
+soundfile>=0.12
+
+# serviços Azure
+azure-cognitiveservices-speech>=1.35
+azure-ai-textanalytics>=5.3
+
+# testes
+pytest>=8.0
+
+# opcionais
+# faster-whisper     # transcrição local quando não houver Azure
+# wfdb               # leitura de registros do PhysioNet/MIMIC

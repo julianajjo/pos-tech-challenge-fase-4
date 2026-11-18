@@ -1,0 +1,504 @@
+[
+  {
+    "patient_id": "P004",
+    "source": "prescription",
+    "severity": "ALTA",
+    "title": "Alteração brusca de dose: Insulina regular",
+    "description": "Aumento da dose diária de Insulina regular (fator 2.5x: 24 → 60 UI/dia) em 3 h. Prescritor: Plantonista.",
+    "timestamp": "2026-11-10T16:00:00",
+    "evidence": {
+      "drug": "Insulina regular",
+      "dose": 20.0,
+      "unit": "UI",
+      "times_per_day": 3,
+      "prescriber": "Plantonista"
+    },
+    "recommended_action": "Confirmar a justificativa clínica da alteração antes da próxima dose.",
+    "score": 0.7,
+    "id": "c27feca9fd"
+  },
+  {
+    "patient_id": "P004",
+    "source": "prescription",
+    "severity": "MEDIA",
+    "title": "Alterações frequentes: Insulina regular",
+    "description": "4 prescrições de Insulina regular em 24 h, indicando instabilidade do controle ou falta de padronização entre plantões.",
+    "timestamp": "2026-11-10T16:00:00",
+    "evidence": {
+      "drug": "Insulina regular",
+      "dose": 20.0,
+      "unit": "UI",
+      "times_per_day": 3,
+      "prescriber": "Plantonista"
+    },
+    "recommended_action": "Revisar protocolo (ex.: escala de insulina) com a equipe.",
+    "score": 0.45,
+    "id": "82ab65a435"
+  },
+  {
+    "patient_id": "P002",
+    "source": "prescription",
+    "severity": "ALTA",
+    "title": "Interação medicamentosa: Varfarina + AAS",
+    "description": "Risco aumentado de sangramento (anticoagulante + antiagregante).",
+    "timestamp": "2026-11-10T18:00:00",
+    "evidence": {
+      "drug": "AAS",
+      "dose": 100.0,
+      "unit": "mg",
+      "times_per_day": 1,
+      "prescriber": "Dr. Souza"
+    },
+    "recommended_action": "Avaliar risco-benefício e monitorar sinais de sangramento/toxicidade.",
+    "score": 0.7,
+    "id": "e67f54d4fe"
+  },
+  {
+    "patient_id": "P004",
+    "source": "prescription",
+    "severity": "ALTA",
+    "title": "Alteração brusca de dose: Insulina regular",
+    "description": "Redução da dose diária de Insulina regular (fator 0.4x: 60 → 24 UI/dia) em 4 h. Prescritor: Plantonista.",
+    "timestamp": "2026-11-10T20:00:00",
+    "evidence": {
+      "drug": "Insulina regular",
+      "dose": 8.0,
+      "unit": "UI",
+      "times_per_day": 3,
+      "prescriber": "Plantonista"
+    },
+    "recommended_action": "Confirmar a justificativa clínica da alteração antes da próxima dose.",
+    "score": 0.7,
+    "id": "95b0c55ff9"
+  },
+  {
+    "patient_id": "P004",
+    "source": "prescription",
+    "severity": "MEDIA",
+    "title": "Alterações frequentes: Insulina regular",
+    "description": "5 prescrições de Insulina regular em 24 h, indicando instabilidade do controle ou falta de padronização entre plantões.",
+    "timestamp": "2026-11-10T20:00:00",
+    "evidence": {
+      "drug": "Insulina regular",
+      "dose": 8.0,
+      "unit": "UI",
+      "times_per_day": 3,
+      "prescriber": "Plantonista"
+    },
+    "recommended_action": "Revisar protocolo (ex.: escala de insulina) com a equipe.",
+    "score": 0.45,
+    "id": "a9bddebb03"
+  },
+  {
+    "patient_id": "P002",
+    "source": "vitals",
+    "severity": "CRITICA",
+    "title": "Anomalia em sinais vitais",
+    "description": "Episódio de 23 min (10/11 20:01-20:23). Sinais alterados: FC, FR, SpO2. Pior momento: FC 109 bpm, PA 140/89 mmHg, SpO2 86%, FR 27 irpm, T 36.6°C. NEWS2 máximo 7. Detectado por: NEWS2, z-score robusto, Isolation Forest.",
+    "timestamp": "2026-11-10T20:01:00",
+    "evidence": {
+      "hr": 109.0,
+      "sbp": 140.0,
+      "dbp": 89.0,
+      "spo2": 86.1,
+      "rr": 27.0,
+      "temp": 36.6,
+      "iso_score_max": 0.118,
+      "news2": 7,
+      "signals": [
+        "hr",
+        "rr",
+        "spo2"
+      ],
+      "methods": [
+        "NEWS2",
+        "z-score robusto",
+        "Isolation Forest"
+      ],
+      "duration_min": 23.0
+    },
+    "recommended_action": "Acionar time de resposta rápida e avaliação médica imediata.",
+    "score": 1.0,
+    "id": "5cc96ee9a5"
+  },
+  {
+    "patient_id": "P002",
+    "source": "fusion",
+    "severity": "CRITICA",
+    "title": "Risco multimodal elevado",
+    "description": "Risco combinado 1.00 a partir de 2 fontes concordantes nas últimas 6 h (vitals 1.00, prescription 0.70). Principais achados: Interação medicamentosa: Varfarina + AAS; Anomalia em sinais vitais.",
+    "timestamp": "2026-11-10T20:01:00",
+    "evidence": {
+      "risk": 1.0,
+      "modalities": {
+        "prescription": 0.7,
+        "vitals": 1.0
+      }
+    },
+    "recommended_action": "Acionar médico responsável e time de resposta rápida.",
+    "score": 1.0,
+    "id": "6042f47138"
+  },
+  {
+    "patient_id": "P002",
+    "source": "prescription",
+    "severity": "ALTA",
+    "title": "Interação medicamentosa: Varfarina + Enoxaparina",
+    "description": "Dupla anticoagulação.",
+    "timestamp": "2026-11-10T22:00:00",
+    "evidence": {
+      "drug": "Enoxaparina",
+      "dose": 40.0,
+      "unit": "mg",
+      "times_per_day": 1,
+      "prescriber": "Dr. Souza"
+    },
+    "recommended_action": "Avaliar risco-benefício e monitorar sinais de sangramento/toxicidade.",
+    "score": 0.7,
+    "id": "edefefc7e8"
+  },
+  {
+    "patient_id": "P002",
+    "source": "movement",
+    "severity": "MEDIA",
+    "title": "Agitação noturna",
+    "description": "Atividade muito acima do perfil do paciente durante a madrugada (índice 57, z=6.7). Possível delirium ou dor.",
+    "timestamp": "2026-11-11T01:35:00",
+    "evidence": {
+      "z": 6.67
+    },
+    "recommended_action": "Avaliar delirium (CAM-ICU), dor e segurança do leito.",
+    "score": 0.4,
+    "id": "812fa3d6fe"
+  },
+  {
+    "patient_id": "P001",
+    "source": "prescription",
+    "severity": "CRITICA",
+    "title": "Dose acima do máximo diário: Morfina",
+    "description": "Morfina 20 mg 6x/dia = 120 mg/dia (máximo de referência 60). Possível erro de digitação/dose.",
+    "timestamp": "2026-11-11T02:00:00",
+    "evidence": {
+      "drug": "Morfina",
+      "dose": 20.0,
+      "unit": "mg",
+      "times_per_day": 6,
+      "prescriber": "Dra. Costa"
+    },
+    "recommended_action": "Suspender administração e confirmar a prescrição com o prescritor e a farmácia.",
+    "score": 0.9,
+    "id": "8ef478ac12"
+  },
+  {
+    "patient_id": "P001",
+    "source": "prescription",
+    "severity": "ALTA",
+    "title": "Alteração brusca de dose: Morfina",
+    "description": "Aumento da dose diária de Morfina (fator 10.0x: 12 → 120 mg/dia) em 12 h. Prescritor: Dra. Costa.",
+    "timestamp": "2026-11-11T02:00:00",
+    "evidence": {
+      "drug": "Morfina",
+      "dose": 20.0,
+      "unit": "mg",
+      "times_per_day": 6,
+      "prescriber": "Dra. Costa"
+    },
+    "recommended_action": "Confirmar a justificativa clínica da alteração antes da próxima dose.",
+    "score": 0.7,
+    "id": "3a583a30c5"
+  },
+  {
+    "patient_id": "P003",
+    "source": "prescription",
+    "severity": "BAIXA",
+    "title": "Padrão atípico de prescrição: Losartana",
+    "description": "Isolation Forest classificou a alteração como atípica (score 0.11).",
+    "timestamp": "2026-11-11T03:00:00",
+    "evidence": {
+      "drug": "Losartana",
+      "dose": 50.0,
+      "unit": "mg",
+      "times_per_day": 2,
+      "prescriber": "Dra. Rocha"
+    },
+    "recommended_action": "Revisão farmacêutica.",
+    "score": 0.25,
+    "id": "33380b8012"
+  },
+  {
+    "patient_id": "P001",
+    "source": "vitals",
+    "severity": "BAIXA",
+    "title": "Anomalia em sinais vitais",
+    "description": "Episódio de 8 min (11/11 07:14-07:21). Sinais alterados: padrão multivariado. Pior momento: FC 92 bpm, PA 108/68 mmHg, SpO2 95%, FR 17 irpm, T 37.2°C. NEWS2 máximo 3. Detectado por: Isolation Forest.",
+    "timestamp": "2026-11-11T07:14:00",
+    "evidence": {
+      "hr": 92.0,
+      "sbp": 108.0,
+      "dbp": 68.0,
+      "spo2": 95.0,
+      "rr": 17.0,
+      "temp": 37.2,
+      "iso_score_max": 0.107,
+      "news2": 3,
+      "signals": [],
+      "methods": [
+        "Isolation Forest"
+      ],
+      "duration_min": 8.0
+    },
+    "recommended_action": "Reavaliar paciente e conferir posicionamento dos sensores.",
+    "score": 0.3,
+    "id": "251d167bf2"
+  },
+  {
+    "patient_id": "P001",
+    "source": "vitals",
+    "severity": "CRITICA",
+    "title": "Anomalia em sinais vitais",
+    "description": "Episódio de 990 min (11/11 07:30-23:59). Sinais alterados: FC, FR, PAS, SpO2, Temp. Pior momento: FC 131 bpm, PA 87/62 mmHg, SpO2 92%, FR 26 irpm, T 39.1°C. NEWS2 máximo 13. Detectado por: NEWS2, Isolation Forest.",
+    "timestamp": "2026-11-11T07:30:00",
+    "evidence": {
+      "hr": 131.0,
+      "sbp": 87.0,
+      "dbp": 62.0,
+      "spo2": 91.9,
+      "rr": 26.0,
+      "temp": 39.1,
+      "iso_score_max": 0.137,
+      "news2": 13,
+      "signals": [
+        "hr",
+        "rr",
+        "sbp",
+        "spo2",
+        "temp"
+      ],
+      "methods": [
+        "NEWS2",
+        "Isolation Forest"
+      ],
+      "duration_min": 990.0
+    },
+    "recommended_action": "Acionar time de resposta rápida e avaliação médica imediata.",
+    "score": 0.9500000000000001,
+    "id": "689ee90225"
+  },
+  {
+    "patient_id": "P001",
+    "source": "fusion",
+    "severity": "CRITICA",
+    "title": "Risco multimodal elevado",
+    "description": "Risco combinado 1.00 a partir de 2 fontes concordantes nas últimas 6 h (vitals 0.95, prescription 0.90). Principais achados: Dose acima do máximo diário: Morfina; Alteração brusca de dose: Morfina; Anomalia em sinais vitais.",
+    "timestamp": "2026-11-11T07:30:00",
+    "evidence": {
+      "risk": 1.0,
+      "modalities": {
+        "prescription": 0.9,
+        "vitals": 0.9500000000000001
+      }
+    },
+    "recommended_action": "Acionar médico responsável e time de resposta rápida.",
+    "score": 1.0,
+    "id": "56389a46ad"
+  },
+  {
+    "patient_id": "P001",
+    "source": "audio",
+    "severity": "MEDIA",
+    "title": "Voz: sinais de fadiga/cansaço",
+    "description": "Escore 0.64. Evidências acústicas: fala lenta, monotonia, pausas longas. Taxa de articulação 3.2 sílabas/s, pausas 51% do tempo, 47 pausas/min.",
+    "timestamp": "2026-11-11T08:30:00",
+    "evidence": {
+      "indicator": "fadiga",
+      "score": 0.637,
+      "audio": "consulta_P001.wav"
+    },
+    "recommended_action": "Correlacionar com sinais vitais e exame físico.",
+    "score": 0.637,
+    "id": "2df71b2d7e"
+  },
+  {
+    "patient_id": "P001",
+    "source": "audio",
+    "severity": "ALTA",
+    "title": "Voz: sinais de dificuldade respiratória",
+    "description": "Escore 0.85. Evidências acústicas: pausas respiratorias, frases curtas, pausas. Taxa de articulação 3.2 sílabas/s, pausas 51% do tempo, 47 pausas/min.",
+    "timestamp": "2026-11-11T08:30:00",
+    "evidence": {
+      "indicator": "dificuldade_respiratoria",
+      "score": 0.85,
+      "audio": "consulta_P001.wav"
+    },
+    "recommended_action": "Correlacionar com sinais vitais e exame físico.",
+    "score": 0.85,
+    "id": "4b06278238"
+  },
+  {
+    "patient_id": "P001",
+    "source": "audio",
+    "severity": "ALTA",
+    "title": "Consulta: termos clínicos críticos",
+    "description": "Paciente relatou: calafrio, cansada, falta de ar, febre, fraqueza, nao tenho vontade de comer, tontura. Sentimento predominante: negative (negativo 100%). Transcrição via transcricao_referencia; análise de texto via local.",
+    "timestamp": "2026-11-11T08:30:00",
+    "evidence": {
+      "terms": [
+        "cansada",
+        "falta de ar",
+        "fraqueza",
+        "febre",
+        "calafrio",
+        "tontura",
+        "nao tenho vontade de comer"
+      ],
+      "sentiment": {
+        "positive": 0.0,
+        "negative": 1.0,
+        "neutral": 0.0,
+        "label": "negative"
+      }
+    },
+    "recommended_action": "Revisar queixas com o paciente e registrar no prontuário.",
+    "score": 0.7,
+    "id": "a597a4df5f"
+  },
+  {
+    "patient_id": "P001",
+    "source": "movement",
+    "severity": "MEDIA",
+    "title": "Imobilidade prolongada",
+    "description": "Sem movimentação significativa há 2.0 h (desde 11/11 08:00), em período diurno.",
+    "timestamp": "2026-11-11T09:55:00",
+    "evidence": {
+      "idle_hours": 2.0
+    },
+    "recommended_action": "Reposicionar o paciente e avaliar nível de consciência.",
+    "score": 0.45,
+    "id": "9277031546"
+  },
+  {
+    "patient_id": "P001",
+    "source": "video",
+    "severity": "BAIXA",
+    "title": "Vídeo: postura atipica",
+    "description": "Padrão postural atípico por 0.6 s (Isolation Forest sobre ângulos articulares).",
+    "timestamp": "2026-11-11T10:00:19",
+    "evidence": {
+      "video": "fisioterapia_simulada.mp4",
+      "time_s": 19.4,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_02_postura_atipica.jpg"
+    },
+    "recommended_action": "Revisar trecho do vídeo.",
+    "score": 0.2,
+    "id": "bbcf9cff48"
+  },
+  {
+    "patient_id": "P001",
+    "source": "video",
+    "severity": "ALTA",
+    "title": "Vídeo: sessao fora do padrao",
+    "description": "4 de 8 repetições fora do padrão esperado. Sugere fadiga, dor ou necessidade de ajustar o exercício.",
+    "timestamp": "2026-11-11T10:00:26",
+    "evidence": {
+      "video": "fisioterapia_simulada.mp4",
+      "time_s": 26.9,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/fisioterapia_simulada/eventos/evento_06_sessao_fora_do_padrao.jpg"
+    },
+    "recommended_action": "Interromper a sessão e reavaliar dor/fadiga do paciente.",
+    "score": 0.7,
+    "id": "88adb8cd24"
+  },
+  {
+    "patient_id": "P004",
+    "source": "video",
+    "severity": "CRITICA",
+    "title": "Vídeo: queda",
+    "description": "Possível queda da pessoa #1: quadril desceu 34% da altura corporal em <1 s e terminou em posição horizontal.",
+    "timestamp": "2026-11-11T11:29:59",
+    "evidence": {
+      "video": "queda_simulada.mp4",
+      "time_s": 4.6,
+      "snapshot": "/home/user/pos-tech-challenge-fase-4/outputs/video/queda_simulada/eventos/evento_01_queda.jpg"
+    },
+    "recommended_action": "Enviar equipe ao local imediatamente.",
+    "score": 0.9,
+    "id": "1e86f5cb0d"
+  },
+  {
+    "patient_id": "P004",
+    "source": "movement",
+    "severity": "ALTA",
+    "title": "Possível queda",
+    "description": "Pico de impacto (índice 100) seguido de 30 min de inatividade.",
+    "timestamp": "2026-11-11T11:30:00",
+    "evidence": {
+      "peak": 100.0
+    },
+    "recommended_action": "Verificar o paciente imediatamente.",
+    "score": 0.7,
+    "id": "921b34623e"
+  },
+  {
+    "patient_id": "P004",
+    "source": "fusion",
+    "severity": "CRITICA",
+    "title": "Risco multimodal elevado",
+    "description": "Risco combinado 1.00 a partir de 2 fontes concordantes nas últimas 6 h (video 0.90, movement 0.70). Principais achados: Vídeo: queda; Possível queda.",
+    "timestamp": "2026-11-11T11:30:00",
+    "evidence": {
+      "risk": 1.0,
+      "modalities": {
+        "video": 0.9,
+        "movement": 0.7
+      }
+    },
+    "recommended_action": "Acionar médico responsável e time de resposta rápida.",
+    "score": 1.0,
+    "id": "496fbb131f"
+  },
+  {
+    "patient_id": "P004",
+    "source": "vitals",
+    "severity": "MEDIA",
+    "title": "Anomalia em sinais vitais",
+    "description": "Episódio de 29 min (11/11 12:02-12:30). Sinais alterados: PAD, FC, PAS. Pior momento: FC 100 bpm, PA 187/109 mmHg, SpO2 96%, FR 15 irpm, T 36.8°C. NEWS2 máximo 1. Detectado por: z-score robusto, Isolation Forest.",
+    "timestamp": "2026-11-11T12:02:00",
+    "evidence": {
+      "hr": 100.0,
+      "sbp": 187.0,
+      "dbp": 109.0,
+      "spo2": 96.4,
+      "rr": 15.0,
+      "temp": 36.8,
+      "iso_score_max": 0.143,
+      "news2": 1,
+      "signals": [
+        "dbp",
+        "hr",
+        "sbp"
+      ],
+      "methods": [
+        "z-score robusto",
+        "Isolation Forest"
+      ],
+      "duration_min": 29.0
+    },
+    "recommended_action": "Reavaliar paciente e conferir posicionamento dos sensores.",
+    "score": 0.55,
+    "id": "1bd23a2546"
+  },
+  {
+    "patient_id": "P002",
+    "source": "movement",
+    "severity": "MEDIA",
+    "title": "Agitação noturna",
+    "description": "Atividade muito acima do perfil do paciente durante a madrugada (índice 50, z=5.5). Possível delirium ou dor.",
+    "timestamp": "2026-11-12T01:35:00",
+    "evidence": {
+      "z": 5.53
+    },
+    "recommended_action": "Avaliar delirium (CAM-ICU), dor e segurança do leito.",
+    "score": 0.4,
+    "id": "eacfa3a829"
+  }
+]

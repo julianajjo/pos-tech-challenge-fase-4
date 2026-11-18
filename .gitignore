@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+*.pt
+models/openpose/*.caffemodel
+outputs/alerts/alerts.jsonl
+*.tmp.mp4
+data/samples/.pessoa_recorte.png

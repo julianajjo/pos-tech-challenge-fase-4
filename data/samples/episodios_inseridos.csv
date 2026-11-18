@@ -1,0 +1,4 @@
+patient_id,kind,start,end,description
+P001,deterioracao_sepse,2026-11-11 06:00:00,2026-11-11 23:59:00,"Taquicardia, hipotensão, taquipneia e febre progressivas"
+P002,dessaturacao,2026-11-10 20:00:00,2026-11-10 20:25:00,Queda de SpO2 para ~84%
+P004,crise_hipertensiva,2026-11-11 12:00:00,2026-11-11 12:40:00,PAS > 180 mmHg

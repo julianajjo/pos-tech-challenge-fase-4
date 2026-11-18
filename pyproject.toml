@@ -1,0 +1,11 @@
+[project]
+name = "hospital-monitor"
+version = "1.0.0"
+description = "Monitoramento multimodal de pacientes (vídeo, áudio, sinais vitais, prescrições e movimentação) com detecção de anomalias e alertas."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
