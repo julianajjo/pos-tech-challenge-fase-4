@@ -14,7 +14,7 @@ O hospital, que já utiliza modelos para analisar exames e documentos, agora que
 📄 **Relatório técnico:** [`docs/relatorio_tecnico.md`](docs/relatorio_tecnico.md)
 ☁️ **Configuração do Azure:** [`docs/azure_setup.md`](docs/azure_setup.md)
 📊 **Painel de exemplo:** [`outputs/painel_equipe_medica.html`](outputs/painel_equipe_medica.html) (baixe e abra no navegador)
-🎬 **Vídeo de apresentação:** _link do YouTube_
+🎬 **Vídeo de apresentação:** [_link do Vimeo_](https://vimeo.com/1247826356)
 
 ![Arquitetura](docs/arquitetura.png)
 
