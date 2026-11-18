@@ -17,7 +17,7 @@ if __name__ == "__main__":
     ap.add_argument("--sem-video", action="store_true")
     ap.add_argument("--sem-audio", action="store_true")
     ap.add_argument("--video", nargs=3, action="append", metavar=("ARQUIVO", "PACIENTE", "MODO"),
-                    help="vídeo extra; MODO = fisioterapia | cirurgia | monitoramento")
+                    help="vídeo extra; MODO = fisioterapia | cirurgia | monitoramento | quarto")
     a = ap.parse_args()
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
     res = run_demo(with_video=not a.sem_video, with_audio=not a.sem_audio, extra_videos=a.video)

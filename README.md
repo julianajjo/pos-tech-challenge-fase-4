@@ -80,8 +80,8 @@ Processa os sinais vitais, prescrições, movimentação, os áudios das consult
 ### Módulos individuais
 
 ```bash
-# vídeo (modos: fisioterapia | cirurgia | monitoramento)
-python scripts/run_video.py data/samples/queda_simulada.mp4 --paciente P004 --modo monitoramento
+# vídeo (modos: fisioterapia | cirurgia | monitoramento | quarto)
+python scripts/run_video.py data/samples/queda_simulada.mp4 --paciente P004 --modo quarto
 python scripts/run_video.py minha_sessao.mp4 --paciente P010 --modo fisioterapia
 
 # áudio de consulta (wav, mp3, m4a...)

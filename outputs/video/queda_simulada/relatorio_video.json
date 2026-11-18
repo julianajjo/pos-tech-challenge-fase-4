@@ -1,7 +1,7 @@
 {
   "video": "/home/user/pos-tech-challenge-fase-4/data/samples/queda_simulada.mp4",
   "patient_id": "P004",
-  "mode": "monitoramento",
+  "mode": "quarto",
   "fps": 25.0,
   "duration_s": 10.0,
   "frames_processed": 125,

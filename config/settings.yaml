@@ -50,6 +50,7 @@ video:
         max_people: 4
         forbidden_classes: [knife, scissors]
     fisioterapia: []
+    quarto: []                  # quarto do paciente: quedas e pessoa no chão, sem zonas
   instrument_classes: [knife, scissors]
 
 audio:

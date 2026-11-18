@@ -1,6 +1,6 @@
 # Relatório automático de vídeo – queda_simulada.mp4
 
-- Paciente: **P004** | Modo: **monitoramento**
+- Paciente: **P004** | Modo: **quarto**
 - Duração: 10.0 s | FPS: 25 | Frames analisados: 125
 - Pessoas rastreadas: 1
 - Objetos detectados (YOLOv8): person (125), tennis racket (2)

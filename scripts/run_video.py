@@ -1,7 +1,7 @@
 """Analisa um vídeo clínico e gera relatório automático.
 
 Exemplos:
-    python scripts/run_video.py data/samples/queda_simulada.mp4 --paciente P004 --modo monitoramento
+    python scripts/run_video.py data/samples/queda_simulada.mp4 --paciente P004 --modo quarto
     python scripts/run_video.py minha_sessao.mp4 --paciente P010 --modo fisioterapia
     python scripts/run_video.py cirurgia.mp4 --modo cirurgia --backend openpose
     python scripts/run_video.py sessao.mp4 --modo fisioterapia --openpose-json saida_openpose/
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("video")
     ap.add_argument("--paciente", default="P000")
-    ap.add_argument("--modo", default="monitoramento", choices=["fisioterapia", "cirurgia", "monitoramento"])
+    ap.add_argument("--modo", default="monitoramento", choices=["fisioterapia", "cirurgia", "monitoramento", "quarto"])
     ap.add_argument("--backend", choices=["yolo", "openpose"], default=None)
     ap.add_argument("--openpose-json", default=None, help="pasta com a saída --write_json do OpenPose")
     ap.add_argument("--max-segundos", type=float, default=None)

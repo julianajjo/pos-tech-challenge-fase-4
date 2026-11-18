@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 AUDIO_SCHEDULE = {"P001": datetime(2026, 11, 11, 8, 30), "P003": datetime(2026, 11, 11, 9, 0)}
 VIDEO_SCHEDULE = {
     "fisioterapia_simulada.mp4": ("P001", "fisioterapia", datetime(2026, 11, 11, 10, 0)),
-    "queda_simulada.mp4": ("P004", "monitoramento", datetime(2026, 11, 11, 11, 29, 55)),
+    "queda_simulada.mp4": ("P004", "quarto", datetime(2026, 11, 11, 11, 29, 55)),
 }
 
 
